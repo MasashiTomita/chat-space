@@ -1,0 +1,30 @@
+.main-chat
+  .main-chat__header
+    .main-chat__header__box
+      .main-chat__header__box__left-box
+        .main-chat__header__box__left-box__name
+          グループ名
+        .main-chat__header__box__left-box__member
+          メンバー
+      .main-chat__header__box__right-box
+        .main-chat__header__box__right-box__edit-btn
+          = link_to "#:" do
+            Edit
+  .main-chat__contents
+    .main-chat__contents__box
+      .main-chat__contents__box__left-box
+        .main-chat__contents__box__left-box__user-name
+          名前
+        .main-chat__contents__box__left-box__text
+          コメント
+      .main-chat__contents__box__right-box
+        .main-chat__contents__box__right-box__date
+          日時
+  .main-chat__form
+    %form
+      %input{class: 'main-chat__form__message',placeholder: 'type a message'}
+      .main-chat__form__mask
+        %label.main-chat__form__mask__icon
+          = icon("fa","image",class: "icon")
+          %input.main-chat__form__mask__hidden{type: "file"}
+      %input.main-chat__form__submit{type: "submit", value: "Send"}
