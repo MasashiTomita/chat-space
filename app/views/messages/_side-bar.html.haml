@@ -1,0 +1,22 @@
+.side-bar
+  .side-bar__header
+    .side-bar__header__box
+      .side-bar__header__box__user-name
+        user-name
+      //上記を表示させる入力方法わからない
+      //class: "   " doの意味がわからない
+      .side-bar__header__box__menu
+        .side-bar__header__box__menu__group-btn
+        = link_to "#", class: "group-btn" do
+          = icon("fas", "edit")
+        .side-bar__header__box__menu__edit-btn
+        = link_to "#", class: "edit-btn" do
+          = icon("fas", "cog")
+          
+  .side-bar__group
+    .side-bar__group__box
+      .side-bar__group__box__name
+        グループ名
+      .side-bar__group__box__message
+        メッセージ
+        
