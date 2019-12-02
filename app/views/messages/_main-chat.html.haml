@@ -20,11 +20,11 @@
       .main-chat__contents__box__right-box
         .main-chat__contents__box__right-box__date
           日時
-  .main-chat__form-bar
-    %form-bar
-      %input{class: 'main-chat__form-bar__message',placeholder: 'type a message'}
-      .main-chat__form-bar__mask
-        %label.main-chat__form-bar__mask__icon
+  .main-chat__form
+    %form
+      %input{class: 'main-chat__form__message',placeholder: 'type a message'}
+      .main-chat__form__mask
+        %label.main-chat__form__mask__icon
           = icon("fa","image",class: "icon")
-          %input.main-chat__form-bar__mask__hidden{type: "file"}
-      %input.main-chat__form-bar__submit{type: "submit", value: "Send"}
+          %input.main-chat__form__mask__hidden{type: "file"}
+      %input.main-chat__form__submit{type: "submit", value: "Send"}

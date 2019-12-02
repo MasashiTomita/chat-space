@@ -1,5 +1,5 @@
-@import "./reset";  //@import "reset";との違いは何？
-@import "font-awesome-sprockets";  //font-awesome導入
-@import "font-awesome";            //font-awesome導入 @import "./font-awesome";との違いは何だろう？
-@import "side-bar";  //_side-bar.scssをapplication.html.hamlの12行目<%= yield %>に読み込ませるため
-@import "main-chat";//_main-chat.scssをapplication.html.hamlの12行目<%= yield %>に読み込ませるため
+@import "./reset";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "side-bar";
+@import "main-chat";

@@ -68,7 +68,7 @@
       }
     }
   }
-  &__form-bar {
+  &__form {
     background-color: #ddd;
     height: 90px;
     width: calc(100% - 300px);
@@ -108,9 +108,6 @@
   }
 }
 
-
-
-//リンクのアンダーバーを消し、色を揃える。
 .main-chat a {
   text-decoration: none;
   color: blue;
