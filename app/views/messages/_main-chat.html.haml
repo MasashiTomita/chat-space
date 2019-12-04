@@ -1,15 +1,20 @@
+-# .messages
+-#   = render @messages
+
+
 .main-chat
   .main-chat__header
+    -# = render @messages
     .main-chat__header__box
       .main-chat__header__box__left-box
         .main-chat__header__box__left-box__name
-          グループ名
+          = @group.name
         .main-chat__header__box__left-box__member
-          メンバー
+          - @group.users .each do |user|
+            = user.name
       .main-chat__header__box__right-box
         .main-chat__header__box__right-box__edit-btn
-          = link_to "#:" do
-            Edit
+          = link_to "Edit", "/groups/#{@group.id}/edit", method: :get
   .main-chat__contents
     .main-chat__contents__box
       .main-chat__contents__box__left-box
@@ -21,10 +26,10 @@
         .main-chat__contents__box__right-box__date
           日時
   .main-chat__form
-    %form
-      %input{class: 'main-chat__form__message',placeholder: 'type a message'}
-      .main-chat__form__mask
-        %label.main-chat__form__mask__icon
-          = icon("fa","image",class: "icon")
-          %input.main-chat__form__mask__hidden{type: "file"}
-      %input.main-chat__form__submit{type: "submit", value: "Send"}
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'main-chat__form__message', placeholder: 'type a message'
+      .fmain-chat__form__mask
+        = f.label :image, class: 'main-chat__form__mask__icon' do
+          = icon('fas', 'image', class: 'icon')
+          = f.file_field :icon, class: 'main-chat__form__mask__hidden'
+      = f.submit 'Send', class: 'main-chat__form__submit'

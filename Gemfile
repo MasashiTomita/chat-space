@@ -57,3 +57,8 @@ gem 'haml-rails'
 
 gem 'font-awesome-sass'
 # FontAwesomの追加、ターミナルでbundle install
+
+gem 'devise'
+
+gem 'carrierwave'
+gem 'mini_magick'

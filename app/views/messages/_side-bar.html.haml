@@ -2,21 +2,21 @@
   .side-bar__header
     .side-bar__header__box
       .side-bar__header__box__user-name
-        user-name
-      //上記を表示させる入力方法わからない
-      //class: "   " doの意味がわからない
+        = current_user.name
       .side-bar__header__box__menu
         .side-bar__header__box__menu__group-btn
-        = link_to "#", class: "group-btn" do
-          = icon("fas", "edit")
+        = link_to new_group_path do
+          = icon("fas", "edit", class:"icon")
         .side-bar__header__box__menu__edit-btn
-        = link_to "#", class: "edit-btn" do
-          = icon("fas", "cog")
+        = link_to edit_user_path(current_user) do
+          = icon("fas", "cog", class: "icon")
           
   .side-bar__group
-    .side-bar__group__box
-      .side-bar__group__box__name
-        グループ名
-      .side-bar__group__box__message
-        メッセージ
+    - current_user.groups.each do |group|
+      .side-bar__group__box 
+        = link_to group_messages_path(group) do
+          .side-bar__group__box__name
+            = group.name
+          .side-bar__group__box__message
+            = group.show_last_message
         
