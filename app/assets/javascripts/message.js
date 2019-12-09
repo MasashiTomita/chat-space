@@ -52,9 +52,7 @@ $(function(){
       contentType: false
     })
     .done(function(data){
-      console.log(data)
       var html = buildHTML(data);
-      console.log(html)
       $('.main-chat__contents').append(html);
       $('.form__submit').prop('disabled', false);
       $('.main-chat__contents').animate({scrollTop: $('.main-chat__contents')[0].scrollHeight},'fast');
