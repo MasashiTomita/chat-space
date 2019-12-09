@@ -24,6 +24,7 @@
       letter-spacing: 3px;
       font-size: 40px;
       font-weight: 200;
+      color: black;
 
       &:after {
         content: '';
@@ -138,4 +139,8 @@
     padding: 0;
     font-size: 13px;
   }
+}
+
+a {
+  text-decoration: none;
 }
